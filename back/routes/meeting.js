@@ -2,13 +2,11 @@ const router = require('express').Router();
 const Meeting = require('../models').Meeting;
 const moment = require('moment')
 router.get("/", async (req, res) => {
-    console.log(req.query)
-
     let orderByValue;
     if (req.query.orderBy) {
         orderByValue = [
             //ordonam masa in functie de ce primim in query: ASC/DESC
-            ['date', req.query.orderBy],
+            ['createdAt', req.query.orderBy],
         ];
     }
 

@@ -5,7 +5,7 @@ router.get("/", async (req, res) => {
     let orderByValue;
     if (req.query.orderBy) {
         orderByValue = [
-            //ordonam masa in functie de ce primim in query: ASC/DESC
+            //ordonam data in functie de ce primim in query: ASC/DESC
             ['createdAt', req.query.orderBy],
         ];
     }

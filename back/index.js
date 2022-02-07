@@ -11,10 +11,7 @@ app.use(cors());
 const PORT = process.env.PORT || 3001;
 model.sequelize.sync();
 
-
 app.use('/', routes);
-
-
 
 app.listen(PORT, () => {
     console.log(`Server started on http://localhost:${PORT}`);
